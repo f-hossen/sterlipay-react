@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Btn } from "../styles/Btn";
-import { MdClose } from "react-icons/md";
-import { BiMenu } from "react-icons/bi";
 import { AnimatePresence, motion } from "motion/react";
+import { MenuBtn } from "./MenuBtn";
 
 export const MobileNav = () => {
   const [show, setShow] = useState(false);
@@ -25,9 +24,9 @@ export const MobileNav = () => {
       </div>
 
       <div className="flex w-full flex-col">
-        <button className="m-5 ml-auto text-3xl" onClick={ToggleShow}>
-          {show ? <MdClose /> : <BiMenu />}
-        </button>
+        <div className="m-2">
+          <MenuBtn show={show} ToggleShow={ToggleShow} />
+        </div>
 
         <AnimatePresence>
           {show && (
@@ -48,7 +47,7 @@ export const MobileNav = () => {
                 duration: 0.2,
                 ease: "easeInOut",
               }}
-              className="bg-light inset-0 z-10 flex h-screen w-screen flex-col"
+              className="bg-light inset-0 z-10 mt-10 flex h-screen w-screen flex-col"
             >
               <div className="mt-20 flex h-full flex-col items-end gap-20 px-10">
                 <nav className="flex flex-col gap-5 text-3xl text-black">
