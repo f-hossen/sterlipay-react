@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Btn } from "../styles/Btn";
+import { Btn } from "../../styles/Btn";
 
 export const DesktopNav = () => {
   return (

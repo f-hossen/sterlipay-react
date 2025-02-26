@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 
 interface BtnProps {
   children: ReactNode;
+  className?: string;
 }
 
 export const Btn: React.FC<BtnProps> = ({ children }) => {
@@ -14,12 +15,22 @@ export const Btn: React.FC<BtnProps> = ({ children }) => {
   );
 };
 
-export const BtnSecondary: React.FC<BtnProps> = ({ children }) => {
+// allow customisation
+export const BtnSecondary: React.FC<BtnProps> = ({
+  children,
+  className = "",
+}) => {
   return (
     <>
-      <button className="bg-dark text-light active:text-dark active:bg-light cursor-pointer rounded-md p-1 transition-all duration-200 ease-in-out hover:underline">
+      <button
+        className={`bg-dark text-light active:text-dark active:bg-light w-fit cursor-pointer rounded-md p-1 transition-all duration-200 ease-in-out hover:underline ${className}`}
+      >
         {children}
       </button>
     </>
   );
+};
+
+export const BtnLearnMore = () => {
+  return <BtnSecondary>Learn more</BtnSecondary>;
 };

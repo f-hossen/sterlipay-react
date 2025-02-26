@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Btn } from "../styles/Btn";
+import { Btn } from "../../styles/Btn";
 import { AnimatePresence, motion } from "motion/react";
 import { MenuBtn } from "./MenuBtn";
 
