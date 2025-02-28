@@ -4,16 +4,42 @@ import { Section1 } from "../components/Section1";
 import { Section2 } from "../components/Section2";
 import { Section3 } from "../components/Section3";
 import { Testimonials } from "../components/Testimonials";
+import { motion } from "motion/react";
 
 export const Home = () => {
   return (
-    <div className="container flex w-screen flex-col items-center justify-center">
+    <motion.div
+      key={location.pathname}
+      initial={{
+        y: -10,
+        opacity: 0,
+      }}
+      animate={{
+        y: 0,
+        opacity: 1,
+        transition: {
+          duration: 0.5,
+          ease: "easeInOut",
+        },
+      }}
+      exit={{
+        opacity: 0,
+        scale: 0.9,
+        y: 30,
+        transition: {
+          delay: 0.4,
+          duration: 0.4,
+          ease: "easeOut",
+        },
+      }}
+      className="container flex w-screen flex-col items-center justify-center"
+    >
       <Hero />
       <Section1 />
       <Section2 />
       <Section3 />
       <Testimonials />
       <Cta />
-    </div>
+    </motion.div>
   );
 };

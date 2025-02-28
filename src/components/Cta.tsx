@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 export const Cta = () => {
   return (
-    <div className="from-light to-light via-dark/35 mt-20 flex h-[300px] w-full flex-col items-center justify-center gap-5 bg-gradient-to-r via-50%">
+    <div className="from-light to-light via-gray/50 mt-20 flex h-[300px] w-full flex-col items-center justify-center gap-5 bg-gradient-to-r via-50%">
       <p className="text-light text-2xl font-bold">Join thousands of users</p>
       <motion.img
         src={ArrowDown}
