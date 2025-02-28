@@ -84,10 +84,11 @@ export const Section3 = () => {
                 x: 0,
               }}
               transition={{
-                delay: 1,
+                delay: 0.5,
                 duration: 1,
                 ease: "anticipate",
               }}
+              viewport={{ once: true, amount: 0.5 }}
             />
           </div>
         </div>

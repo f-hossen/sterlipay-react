@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Btn } from "../../styles/Btn";
 import { AnimatePresence, motion } from "motion/react";
 import { MenuBtn } from "./MenuBtn";
+import { Link } from "react-router-dom";
 
 export const MobileNav = () => {
   const [show, setShow] = useState(false);
@@ -12,17 +13,16 @@ export const MobileNav = () => {
 
   return (
     <div className="flex md:hidden">
-      <div className="cursor-pointer">
-        <a href="/">
+      <Link to={"/"}>
+        <div className="cursor-pointer">
           <img
             onClick={ToggleShow}
             className="absolute m-5 h-10"
             src="./logo.svg"
             alt="logo"
           />
-        </a>
-      </div>
-
+        </div>
+      </Link>
       <div className="flex w-full flex-col">
         <div className="m-2">
           <MenuBtn show={show} ToggleShow={ToggleShow} />
@@ -82,8 +82,9 @@ export const MobileNav = () => {
                     About
                   </motion.a>
                 </nav>
-
-                <Btn>Create Account</Btn>
+                <Link to={"/signup"} onClick={ToggleShow}>
+                  <Btn>Create Account</Btn>
+                </Link>
               </div>
             </motion.div>
           )}

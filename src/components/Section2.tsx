@@ -1,7 +1,6 @@
-import Img1 from "../assets/images/1.jpg";
-import Img2 from "../assets/images/2.jpg";
-import Img3 from "../assets/images/3.jpg";
-
+import Img1 from "../assets/images/svg-1.svg";
+import Img2 from "../assets/images/svg-2.svg";
+import Img3 from "../assets/images/svg-3.svg";
 import { motion } from "motion/react";
 
 export const Section2 = () => {
@@ -33,21 +32,30 @@ export const Section2 = () => {
       </div>
 
       <div className="mt-20 flex justify-between">
-        <img
-          className="h-[250px] w-[170px] rounded-4xl object-cover"
-          src={Img1}
-          alt="image-1"
-        />
-        <img
-          className="h-[250px] w-[170px] rounded-4xl object-cover"
-          src={Img2}
-          alt="image-2"
-        />
-        <img
-          className="h-[250px] w-[170px] rounded-4xl object-cover"
-          src={Img3}
-          alt="image-3"
-        />
+        <div className="flex flex-col items-center justify-center">
+          <img
+            className="h-[250px] w-[170px] rounded-4xl object-cover"
+            src={Img1}
+            alt="image-1"
+          />
+          <p className="my-5 font-medium">Essential Savings</p>
+        </div>
+        <div className="flex flex-col items-center justify-center">
+          <img
+            className="h-[250px] w-[170px] rounded-4xl object-cover"
+            src={Img2}
+            alt="image-2"
+          />
+          <p className="my-5 font-medium">Joint Accounts</p>
+        </div>
+        <div className="flex flex-col items-center justify-center">
+          <img
+            className="h-[250px] w-[170px] rounded-4xl object-cover"
+            src={Img3}
+            alt="image-3"
+          />
+          <p className="my-5 font-medium">Student Accounts</p>
+        </div>
       </div>
     </motion.div>
   );

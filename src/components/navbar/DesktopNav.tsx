@@ -1,15 +1,18 @@
 import { motion } from "motion/react";
 import { Btn } from "../../styles/Btn";
+import { Link } from "react-router-dom";
 
 export const DesktopNav = () => {
   return (
-    <div className="hidden h-25 w-screen items-center bg-gray-200 md:flex">
+    <div className="text-dark z-10 hidden h-20 w-screen items-center backdrop-blur-3xl md:flex">
       <div className="flex w-full justify-between px-10">
-        <div className="cursor-pointer">
-          <img className="absolute h-10" src="./logo.svg" alt="logo" />
-        </div>
+        <Link to={"/"}>
+          <div className="cursor-pointer">
+            <img className="absolute h-10" src="./logo.svg" alt="logo" />
+          </div>
+        </Link>
 
-        <nav className="flex gap-10 text-xl text-black">
+        <nav className="flex gap-10 text-xl">
           <motion.a
             className="cursor-pointer p-2 hover:text-green-800 hover:underline hover:underline-offset-8"
             whileHover={{
@@ -39,7 +42,9 @@ export const DesktopNav = () => {
             About
           </motion.a>
         </nav>
-        <Btn>Create Account</Btn>
+        <Link to={"/signup"}>
+          <Btn>Create Account</Btn>
+        </Link>
       </div>
     </div>
   );

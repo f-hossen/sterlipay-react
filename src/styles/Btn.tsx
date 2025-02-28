@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { Link } from "react-router-dom";
 
 interface BtnProps {
   children: ReactNode;
@@ -32,5 +33,9 @@ export const BtnSecondary: React.FC<BtnProps> = ({
 };
 
 export const BtnLearnMore = () => {
-  return <BtnSecondary>Learn more</BtnSecondary>;
+  return (
+    <Link to={"/signup"}>
+      <BtnSecondary>Learn more</BtnSecondary>
+    </Link>
+  );
 };
