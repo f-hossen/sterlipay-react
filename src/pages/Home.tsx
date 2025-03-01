@@ -10,10 +10,6 @@ export const Home = () => {
   return (
     <motion.div
       key={location.pathname}
-      initial={{
-        y: -10,
-        opacity: 0,
-      }}
       animate={{
         y: 0,
         opacity: 1,
@@ -32,7 +28,7 @@ export const Home = () => {
           ease: "easeOut",
         },
       }}
-      className="container flex w-screen flex-col items-center justify-center"
+      className="container flex w-screen flex-col items-center justify-center px-4"
     >
       <Hero />
       <Section1 />

@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 export const Section2 = () => {
   return (
     <motion.div
-      className="mt-30 flex flex-col"
+      className="mt-20 flex flex-col lg:mt-30"
       initial={{
         opacity: 0,
         y: 30,
@@ -19,10 +19,10 @@ export const Section2 = () => {
         duration: 0.5,
         ease: "easeInOut",
       }}
-      viewport={{ once: true, amount: 0.6 }}
+      viewport={{ once: true, amount: 0.4 }}
     >
-      <div className="flex">
-        <span className="w-2/2 text-2xl font-extrabold">
+      <div className="flex flex-col gap-5 text-center lg:flex-row lg:text-left">
+        <span className="text-xl font-extrabold lg:w-2/2 lg:text-2xl">
           Choose the Right Account for You
         </span>
         <p className="text-gray text-xs">
@@ -31,7 +31,7 @@ export const Section2 = () => {
         </p>
       </div>
 
-      <div className="mt-20 flex justify-between">
+      <div className="mt-20 flex flex-col gap-5 lg:flex-row lg:justify-between">
         <div className="flex flex-col items-center justify-center">
           <img
             className="h-[250px] w-[170px] rounded-4xl object-cover"

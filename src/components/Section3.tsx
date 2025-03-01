@@ -2,7 +2,7 @@ import Card from "../assets/images/card.svg";
 import { BtnLearnMore } from "../styles/Btn";
 import { motion } from "motion/react";
 
-import DeviceImg from "../assets/images/device.png";
+import DeviceImg from "../assets/images/device.svg";
 import InfoImg from "../assets/images/info.svg";
 
 export const Section3 = () => {
@@ -20,16 +20,17 @@ export const Section3 = () => {
         duration: 0.7,
         ease: "easeInOut",
       }}
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.3 }}
     >
-      <div className="mt-20 flex w-full">
-        <div className="w-1/2">
-          <img src={Card} alt="" />
+      {/* card  */}
+      <div className="mt-20 flex w-full flex-col items-center gap-5 lg:flex-row lg:items-start">
+        <div className="flex w-full flex-col items-center justify-center lg:w-1/2">
+          <img className="" src={Card} alt="" />
         </div>
-        <div className="ml-10 w-1/2">
-          <span className="text-2xl font-extrabold">
+        <div className="lg:ml-10 lg:w-1/2">
+          <p className="text-center text-lg font-extrabold md:text-left lg:block lg:text-2xl">
             A simple savings account with no monthly fees and easy access.
-          </span>
+          </p>
           <p className="my-8">
             Experience banking without the hassle. Our intuitive platform lets
             you manage your accounts, transfer funds, and pay bills with just a
@@ -57,9 +58,9 @@ export const Section3 = () => {
         }}
         viewport={{ once: true, amount: 0.5 }}
       >
-        <div className="mt-20 flex w-full">
-          <div className="ml-10 w-1/2">
-            <span className="text-2xl font-extrabold">
+        <div className="mt-20 flex w-full flex-col pb-20 lg:flex-row lg:gap-10">
+          <div className="lg:w-1/2">
+            <span className="text-lg font-extrabold lg:text-2xl">
               Take Control of Your Finances with Ease
             </span>
             <p className="my-8">
@@ -71,8 +72,11 @@ export const Section3 = () => {
 
             <BtnLearnMore />
           </div>
-          <div className="w-1/2">
+
+          {/* device img */}
+          <div className="absolute right-0 mt-90 flex w-screen justify-end md:mt-60 lg:static lg:mt-0 lg:w-1/2 lg:py-0">
             <motion.img
+              className="md:h-80 lg:h-auto"
               src={DeviceImg}
               alt=""
               initial={{
@@ -88,12 +92,13 @@ export const Section3 = () => {
                 duration: 1,
                 ease: "anticipate",
               }}
-              viewport={{ once: true, amount: 0.5 }}
+              viewport={{ once: true, amount: 0.3 }}
             />
           </div>
         </div>
       </motion.div>
 
+      {/* info */}
       <motion.div
         initial={{
           opacity: 0,
@@ -107,14 +112,14 @@ export const Section3 = () => {
           duration: 0.7,
           ease: "easeInOut",
         }}
-        viewport={{ once: true, amount: 0.5 }}
-        className="mt-20 flex w-full"
+        viewport={{ once: true, amount: 0.3 }}
+        className="mt-60 flex w-full flex-col lg:mt-20 lg:flex-row"
       >
-        <div className="w-1/2">
+        <div className="w-full lg:w-1/2">
           <img src={InfoImg} alt="" />
         </div>
-        <div className="ml-10 w-1/2">
-          <span className="text-2xl font-extrabold">
+        <div className="lg:ml-10 lg:w-1/2">
+          <span className="text-lg font-extrabold lg:text-2xl">
             Smart Financial Insights at Your Fingertips
           </span>
           <p className="my-8">

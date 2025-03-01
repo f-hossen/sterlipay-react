@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export const DesktopNav = () => {
   return (
-    <div className="text-dark z-10 hidden h-20 w-screen items-center backdrop-blur-3xl md:flex">
+    <div className="text-dark z-10 hidden h-20 w-screen items-center backdrop-blur-3xl lg:flex">
       <div className="flex w-full justify-between px-10">
         <Link to={"/"}>
           <div className="cursor-pointer">

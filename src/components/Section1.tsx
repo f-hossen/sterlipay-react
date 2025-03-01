@@ -1,12 +1,11 @@
 import { BtnLearnMore } from "../styles/Btn";
-import StarIcon from "../assets/images/start-icon.svg";
+import StarIcon from "../assets/images/star-icon.svg";
 
 import { motion } from "motion/react";
 
 export const Section1 = () => {
   return (
     <motion.div
-      className="flex h-fit w-full"
       initial={{
         opacity: 0,
         y: 30,
@@ -20,25 +19,26 @@ export const Section1 = () => {
         ease: "easeInOut",
       }}
       viewport={{ once: true, amount: 0.5 }}
+      className="flex h-fit w-full flex-col items-center gap-10 lg:flex-row lg:gap-0"
     >
-      <div className="flex w-1/2 flex-col gap-8">
-        <span className="text-2xl font-extrabold">
+      <div className="flex flex-col gap-8 lg:w-1/2">
+        <span className="text-center text-lg font-extrabold lg:text-left lg:text-2xl">
           Banking Made Simple, Savings Made Easy
         </span>
 
         <p>
           Our banking platform is designed to help you save more, spend smarter,
           and manage your finances effortlessly. Enjoy security, flexibility,
-          and exclusive rewards—all in one place. With instant access, automated
-          savings, and real-time insights
+          and exclusive rewards, all in one place. With instant access,
+          automated savings, and real-time insights
         </p>
 
         <BtnLearnMore />
       </div>
 
-      <div className="ml-10 flex w-1/2 flex-col gap-8">
+      <div className="flex flex-col gap-8 lg:ml-10 lg:w-1/2">
         <div className="flex gap-5">
-          <img className="h-12" src={StarIcon} />
+          <img className="h-8 lg:h-12" src={StarIcon} />
           <div className="flex flex-col gap-2">
             <span className="font-medium">Transactions</span>
             <p>
@@ -48,7 +48,7 @@ export const Section1 = () => {
         </div>
 
         <div className="flex gap-5">
-          <img className="h-12" src={StarIcon} />
+          <img className="h-8 lg:h-12" src={StarIcon} />
           <div className="flex flex-col gap-2">
             <span className="font-medium">Secure</span>
             <p>
@@ -59,7 +59,7 @@ export const Section1 = () => {
         </div>
 
         <div className="flex gap-5">
-          <img className="h-12" src={StarIcon} />
+          <img className="h-8 lg:h-12" src={StarIcon} />
           <div className="flex flex-col gap-2">
             <span className="font-medium">Rewards</span>
             <p>

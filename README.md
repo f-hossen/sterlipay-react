@@ -1,50 +1,57 @@
-# React + TypeScript + Vite
+## SterliPay: A Responsive banking web app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Technologies
+- React+Vite
+- Typescript
+- Tailwind CSS
+- Motion
 
-Currently, two official plugins are available:
+### Live: [http://sterlipay.netlify.app](http://sterlipay.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#### Preview
+![preview](public/preview-1.jpg)
+![preview](public/preview-2.jpg)
 
-## Expanding the ESLint configuration
+### Features
+- Responsive design for mobile and desktop.
+- Smooth animations and transitions using Motion.
+- Sign-up and sign-in forms
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+##### Installation:
+1. **Clone the repository**: 
+   ```bash
+   git clone https://github.com/f-hossen/sterlipay-react.git
+   cd sterlipay-react
 
-- Configure the top-level `parserOptions` property like this:
+2. Install dependencies:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+ - **yarn:**
+     ```bash
+     yarn
+     ```
+     <button onclick="navigator.clipboard.writeText('yarn')"></button>
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **npm:**
+     ```bash
+     npm install
+     ```
+     <button onclick="navigator.clipboard.writeText('npm install')"></button>
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+3. Start the development server:
+  - **yarn:**
+     ```bash
+     yarn dev
+     ```
+     <button onclick="navigator.clipboard.writeText('yarn dev')"></button>
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+  - **npm:**
+     ```bash
+     npm run dev
+     ```
+     <button onclick="navigator.clipboard.writeText('npm run dev')"></button>
+
+#### Author
+[Farhad H.](https://f-hossen.vercel.app/)
+
+#### License
+This project is open source and available under the [MIT License](LICENSE)

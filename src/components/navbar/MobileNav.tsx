@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Btn } from "../../styles/Btn";
 import { AnimatePresence, motion } from "motion/react";
 import { MenuBtn } from "./MenuBtn";
@@ -11,20 +11,32 @@ export const MobileNav = () => {
     setShow(!show);
   };
 
+  // disable scrolling when show nav
+  useEffect(() => {
+    if (show) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  });
+
   return (
-    <div className="flex md:hidden">
-      <Link to={"/"}>
-        <div className="cursor-pointer">
+    <div className="flex w-screen lg:hidden">
+      <div className="absolute top-5 left-5 cursor-pointer">
+        <Link to={"/"}>
           <img
-            onClick={ToggleShow}
-            className="absolute m-5 h-10"
+            onClick={() => setShow(false)}
+            className="h-10"
             src="./logo.svg"
             alt="logo"
           />
-        </div>
-      </Link>
-      <div className="flex w-full flex-col">
-        <div className="m-2">
+        </Link>
+      </div>
+      <div className="ml-auto flex w-fit flex-col">
+        <div className="z-100 m-2">
           <MenuBtn show={show} ToggleShow={ToggleShow} />
         </div>
 
@@ -33,24 +45,35 @@ export const MobileNav = () => {
             <motion.div
               initial={{
                 y: -100,
+                rotateX: 100,
+                height: "0",
+                overflow: "hidden",
                 opacity: 0,
               }}
               animate={{
                 y: 0,
+                rotateX: 0,
+                height: "100%",
                 opacity: 1,
+                transition: {
+                  duration: 0.8,
+                  ease: "easeInOut",
+                },
               }}
               exit={{
+                rotateX: 100,
                 y: -100,
+                height: 0,
                 opacity: 0,
               }}
               transition={{
-                duration: 0.2,
+                duration: 0.8,
                 ease: "easeInOut",
               }}
-              className="bg-light inset-0 z-10 mt-10 flex h-screen w-screen flex-col"
+              className="bg-light absolute inset-0 z-10 flex h-screen w-screen flex-col backdrop-blur-2xl"
             >
               <div className="mt-20 flex h-full flex-col items-end gap-20 px-10">
-                <nav className="flex flex-col gap-5 text-3xl text-black">
+                <nav className="text-dark flex flex-col gap-5 text-3xl">
                   <motion.a
                     onClick={ToggleShow}
                     className="cursor-pointer p-2 active:text-green-800 active:underline active:underline-offset-8"

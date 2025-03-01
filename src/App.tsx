@@ -10,7 +10,7 @@ import { ForgotPassword } from "./pages/ForgotPassword";
 const App = () => {
   const location = useLocation();
   return (
-    <div className="flex min-h-screen w-screen flex-col items-center justify-center">
+    <div className="flex min-h-screen max-w-screen flex-col items-center justify-center">
       <Navbar />
       <div className="flex flex-col items-center justify-center overflow-hidden">
         <AnimatePresence mode="wait">

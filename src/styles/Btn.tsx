@@ -35,7 +35,9 @@ export const BtnSecondary: React.FC<BtnProps> = ({
 export const BtnLearnMore = () => {
   return (
     <Link to={"/signup"}>
-      <BtnSecondary>Learn more</BtnSecondary>
+      <BtnSecondary className="px-2 text-sm lg:text-base">
+        Learn more
+      </BtnSecondary>
     </Link>
   );
 };
