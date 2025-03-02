@@ -20,11 +20,11 @@ export const Section3 = () => {
         duration: 0.7,
         ease: "easeInOut",
       }}
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.2 }}
     >
       {/* card  */}
-      <div className="mt-20 flex w-full flex-col items-center gap-5 lg:flex-row lg:items-start">
-        <div className="flex w-full flex-col items-center justify-center lg:w-1/2">
+      <div className="mt-20 flex w-full flex-col items-center gap-5 px-6 lg:flex-row lg:items-start lg:px-0">
+        <div className="flex w-full flex-col items-center justify-center lg:w-1/2 lg:items-start">
           <img className="" src={Card} alt="" />
         </div>
         <div className="lg:ml-10 lg:w-1/2">
@@ -58,8 +58,8 @@ export const Section3 = () => {
         }}
         viewport={{ once: true, amount: 0.5 }}
       >
-        <div className="mt-20 flex w-full flex-col lg:flex-row lg:gap-10">
-          <div className="lg:w-1/2">
+        <div className="mt-20 flex flex-col lg:flex-row lg:gap-10">
+          <div className="px-6 lg:w-1/2 lg:px-0">
             <span className="text-lg font-extrabold lg:text-2xl">
               Take Control of Your Finances with Ease
             </span>
@@ -118,7 +118,7 @@ export const Section3 = () => {
         <div className="w-full lg:w-1/2">
           <img src={InfoImg} alt="" />
         </div>
-        <div className="lg:ml-10 lg:w-1/2">
+        <div className="px-6 lg:ml-10 lg:w-1/2 lg:px-0">
           <span className="text-lg font-extrabold lg:text-2xl">
             Smart Financial Insights at Your Fingertips
           </span>
