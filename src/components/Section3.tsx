@@ -58,7 +58,7 @@ export const Section3 = () => {
         }}
         viewport={{ once: true, amount: 0.5 }}
       >
-        <div className="mt-20 flex w-full flex-col pb-20 lg:flex-row lg:gap-10">
+        <div className="mt-20 flex w-full flex-col lg:flex-row lg:gap-10">
           <div className="lg:w-1/2">
             <span className="text-lg font-extrabold lg:text-2xl">
               Take Control of Your Finances with Ease
@@ -74,7 +74,7 @@ export const Section3 = () => {
           </div>
 
           {/* device img */}
-          <div className="absolute right-0 mt-90 flex w-screen justify-end md:mt-60 lg:static lg:mt-0 lg:w-1/2 lg:py-0">
+          <div className="mt-10 flex w-screen justify-end lg:static lg:mt-0 lg:w-1/2 lg:py-0">
             <motion.img
               className="md:h-80 lg:h-auto"
               src={DeviceImg}
@@ -113,7 +113,7 @@ export const Section3 = () => {
           ease: "easeInOut",
         }}
         viewport={{ once: true, amount: 0.3 }}
-        className="mt-60 flex w-full flex-col lg:mt-20 lg:flex-row"
+        className="mt-10 flex w-full flex-col lg:mt-20 lg:flex-row"
       >
         <div className="w-full lg:w-1/2">
           <img src={InfoImg} alt="" />

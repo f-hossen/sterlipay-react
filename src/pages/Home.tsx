@@ -28,7 +28,7 @@ export const Home = () => {
           ease: "easeOut",
         },
       }}
-      className="container flex w-screen flex-col items-center justify-center px-4"
+      className="container flex w-screen flex-col items-center justify-center px-6 lg:px-0"
     >
       <Hero />
       <Section1 />
