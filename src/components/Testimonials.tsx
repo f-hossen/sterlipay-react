@@ -145,7 +145,7 @@ export const Testimonials = () => {
           </div>
         </div>
 
-        <div className="mt-8 flex flex-col gap-2">
+        <div className="mt-8 flex flex-col gap-5">
           <BsQuote className="text:base lg:text-xl" />
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.

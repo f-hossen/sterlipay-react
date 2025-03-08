@@ -1,33 +1,26 @@
 import Card from "../assets/images/card.svg";
 import { BtnLearnMore } from "../styles/Btn";
 import { motion } from "motion/react";
-
 import DeviceImg from "../assets/images/device.svg";
 import InfoImg from "../assets/images/info.svg";
 
 export const Section3 = () => {
   return (
-    <motion.div
-      initial={{
-        opacity: 0,
-        y: 30,
-      }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-      }}
-      transition={{
-        duration: 0.7,
-        ease: "easeInOut",
-      }}
-      viewport={{ once: true, amount: 0.2 }}
-    >
+    <div>
       {/* card  */}
-      <div className="mt-20 flex w-full flex-col items-center gap-5 px-6 lg:flex-row lg:items-start lg:px-0">
-        <div className="flex w-full flex-col items-center justify-center lg:w-1/2 lg:items-start">
-          <img className="" src={Card} alt="" />
-        </div>
-        <div className="lg:ml-10 lg:w-1/2">
+      <div className="mt-20 flex flex-col items-center gap-5 px-6 lg:flex-row lg:items-start lg:px-0">
+        <motion.div
+          className="flex w-full flex-col items-center justify-center lg:w-1/2 lg:items-start"
+          initial={{ clipPath: "inset(0% 0% 100% 0%)" }}
+          whileInView={{
+            clipPath: "inset(0% 0% 0% 0%)",
+          }}
+          transition={{ delay: 0.5, duration: 1, ease: "easeInOut" }}
+          viewport={{ once: true }}
+        >
+          <img src={Card} alt="card image" />
+        </motion.div>
+        <div className="w-full lg:ml-10 lg:w-1/2">
           <p className="text-center text-lg font-extrabold md:text-left lg:block lg:text-2xl">
             A simple savings account with no monthly fees and easy access.
           </p>
@@ -38,7 +31,6 @@ export const Section3 = () => {
             encryption and multi-factor authentication to ensure your financial
             information is always safe and protected.
           </p>
-
           <BtnLearnMore />
         </div>
       </div>
@@ -59,7 +51,7 @@ export const Section3 = () => {
         viewport={{ once: true, amount: 0.5 }}
       >
         <div className="mt-20 flex flex-col lg:flex-row lg:gap-10">
-          <div className="px-6 lg:w-1/2 lg:px-0">
+          <div className="w-full px-6 lg:w-1/2 lg:px-0">
             <span className="text-lg font-extrabold lg:text-2xl">
               Take Control of Your Finances with Ease
             </span>
@@ -69,12 +61,11 @@ export const Section3 = () => {
               real-time insights and a sleek interface, financial freedom is
               just a tap away.
             </p>
-
             <BtnLearnMore />
           </div>
 
           {/* device img */}
-          <div className="mt-10 flex w-screen justify-end lg:static lg:mt-0 lg:w-1/2 lg:py-0">
+          <div className="mt-10 flex w-full justify-end lg:static lg:mt-0 lg:w-1/2 lg:py-0">
             <motion.img
               className="md:h-80 lg:h-auto"
               src={DeviceImg}
@@ -130,6 +121,6 @@ export const Section3 = () => {
           <BtnLearnMore />
         </div>
       </motion.div>
-    </motion.div>
+    </div>
   );
 };

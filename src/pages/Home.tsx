@@ -28,14 +28,16 @@ export const Home = () => {
           ease: "easeOut",
         },
       }}
-      className="container flex w-screen flex-col items-center justify-center px-6 lg:px-0"
+      className="flex flex-col items-center justify-center"
     >
       <Hero />
-      <Section1 />
-      <Section2 />
-      <Section3 />
-      <Testimonials />
-      <Cta />
+      <div className="container w-screen px-6 lg:px-0">
+        <Section1 />
+        <Section2 />
+        <Section3 />
+        <Testimonials />
+        <Cta />
+      </div>
     </motion.div>
   );
 };

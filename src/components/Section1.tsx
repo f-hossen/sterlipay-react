@@ -1,6 +1,5 @@
 import { BtnLearnMore } from "../styles/Btn";
 import StarIcon from "../assets/images/star-icon.svg";
-
 import { motion } from "motion/react";
 
 export const Section1 = () => {
@@ -19,9 +18,9 @@ export const Section1 = () => {
         ease: "easeInOut",
       }}
       viewport={{ once: true, amount: 0.5 }}
-      className="flex h-fit w-full flex-col items-center gap-10 lg:flex-row lg:gap-0"
+      className="mt-20 flex h-fit w-full flex-col items-center gap-10 lg:flex-row lg:gap-0"
     >
-      <div className="flex flex-col gap-8 lg:w-1/2">
+      <div className="flex w-full flex-col gap-8 lg:w-1/2">
         <span className="text-center text-lg font-extrabold lg:text-left lg:text-2xl">
           Banking Made Simple, Savings Made Easy
         </span>

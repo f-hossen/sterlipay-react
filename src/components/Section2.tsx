@@ -19,7 +19,7 @@ export const Section2 = () => {
         duration: 0.5,
         ease: "easeInOut",
       }}
-      viewport={{ once: true, amount: 0.4 }}
+      viewport={{ once: true, amount: 0.2 }}
     >
       <div className="flex flex-col gap-5 text-center lg:flex-row lg:text-left">
         <span className="text-xl font-extrabold lg:w-2/2 lg:text-2xl">
